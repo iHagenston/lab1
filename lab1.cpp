@@ -338,12 +338,16 @@ void render()
     //Draw shapes...
     //draw the box
     Shape *s;
-    Rect *r;
+    
+    /*r.center = 0;
+    r.left = 400;
+    r.bot = g.yres - 350;
+    ggprint8b(&r, 16, 0x00ffc946, "Req");
+    */
     glColor3ub(90,140,90);
     s = &g.box;
     glPushMatrix();
     glTranslatef(s->center.x, s->center.y, s->center.z);
-    ggprint8b(r, 16, 0x00ff0000, "Requirements");
     float w, h;
     w = s->width;
     h = s->height;
@@ -372,7 +376,12 @@ void render()
     }
     //
     //Draw your 2D text here
+    Rect r;
 
+    r.center = 0;
+    r.left = 405;
+    r.bot = g.yres - 405;
+    ggprint8b(&r, 16, 0x00ffc946, "Requirements");
 
 
 
