@@ -338,11 +338,12 @@ void render()
     //Draw shapes...
     //draw the box
     Shape *s;
+    Rect *r;
     glColor3ub(90,140,90);
     s = &g.box;
     glPushMatrix();
     glTranslatef(s->center.x, s->center.y, s->center.z);
-	ggprint8b(&s, 16, 0x00ff0000, "Requirements");
+    ggprint8b(r, 16, 0x00ff0000, "Requirements");
     float w, h;
     w = s->width;
     h = s->height;
